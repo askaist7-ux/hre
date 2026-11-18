@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>로그인 | HRE</title>
+<link rel="icon" href="assets/img/hre-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-page">
+  <aside class="auth-side">
+    <a href="index.html"><img src="assets/img/hre-logo.png" alt="HRE"></a>
+    <div>
+      <p class="kicker">Welcome back</p>
+      <h1>다시 만나서<br>반갑습니다<em>.</em></h1>
+    </div>
+    <p style="font-size:13px">© 2026 HRE Co., Ltd.</p>
+  </aside>
+  <main class="auth-main">
+    <div class="auth-box">
+      <p class="label">Login</p>
+      <h2>로그인</h2>
+      <p class="desc">가입하신 이메일과 비밀번호를 입력해 주세요.</p>
+      <div class="alert" id="alert" role="alert"></div>
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="name@company.com" required>
+          <div class="msg" id="emailMsg"></div>
+        </div>
+        <div class="field">
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" placeholder="비밀번호" required>
+          <div class="msg" id="passwordMsg"></div>
+        </div>
+        <div class="form-foot">
+          <label class="check" style="margin:0"><input type="checkbox" id="remember"> 로그인 상태 유지</label>
+          <a href="#" id="forgot" style="text-decoration:underline">비밀번호 찾기</a>
+        </div>
+        <button class="btn y lg" type="submit" style="width:100%" id="submitBtn">로그인</button>
+      </form>
+      <p style="margin-top:22px;font-size:15px;text-align:center">아직 회원이 아니신가요? <a href="signup.html" style="font-weight:700;border-bottom:3px solid var(--y)">회원가입</a></p>
+      <p class="note">데모 버전: 계정 정보는 이 브라우저(localStorage)에만 저장됩니다. 실제 운영 시 서버 인증으로 교체하세요.</p>
+    </div>
+  </main>
+</div>
+<script src="js/auth.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

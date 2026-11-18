@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>회원가입 | HRE</title>
+<link rel="icon" href="assets/img/hre-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-page">
+  <aside class="auth-side">
+    <a href="index.html"><img src="assets/img/hre-logo.png" alt="HRE"></a>
+    <div>
+      <p class="kicker">Join HRE</p>
+      <h1>함께<br>성장할 준비<em>.</em></h1>
+    </div>
+    <p style="font-size:13px">© 2026 HRE Co., Ltd.</p>
+  </aside>
+  <main class="auth-main">
+    <div class="auth-box">
+      <p class="label">Sign up</p>
+      <h2>회원가입</h2>
+      <p class="desc">필수 항목(*)을 입력하고 약관에 동의해 주세요.</p>
+      <div class="alert" id="alert" role="alert"></div>
+      <form id="signupForm" novalidate>
+        <div class="field">
+          <label for="name">이름 *</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="홍길동" required>
+          <div class="msg" id="nameMsg"></div>
+        </div>
+        <div class="field">
+          <label for="email">이메일 *</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="name@company.com" required>
+          <div class="msg" id="emailMsg"></div>
+        </div>
+        <div class="field">
+          <label for="company">회사/소속</label>
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="(선택)">
+        </div>
+        <div class="field">
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="010-0000-0000 (선택)">
+          <div class="msg" id="phoneMsg"></div>
+        </div>
+        <div class="field">
+          <label for="password">비밀번호 *</label>
+          <input type="password" id="password" name="password" autocomplete="new-password" placeholder="8자 이상, 영문·숫자 포함" required>
+          <div class="strength"><i id="strengthBar"></i></div>
+          <div class="msg" id="passwordMsg"></div>
+        </div>
+        <div class="field">
+          <label for="password2">비밀번호 확인 *</label>
+          <input type="password" id="password2" name="password2" autocomplete="new-password" required>
+          <div class="msg" id="password2Msg"></div>
+        </div>
+        <label class="check"><input type="checkbox" id="agreeAll"> <b>전체 동의</b></label>
+        <label class="check"><input type="checkbox" id="terms" class="agree"> (필수) 이용약관에 동의합니다.</label>
+        <label class="check"><input type="checkbox" id="privacy" class="agree"> (필수) 개인정보 수집·이용에 동의합니다.</label>
+        <label class="check"><input type="checkbox" id="marketing" class="agree"> (선택) 소식·안내 수신에 동의합니다.</label>
+        <div class="msg" id="agreeMsg"></div>
+        <button class="btn y lg" type="submit" style="width:100%;margin-top:14px" id="submitBtn">가입하기</button>
+      </form>
+      <p style="margin-top:22px;font-size:15px;text-align:center">이미 회원이신가요? <a href="login.html" style="font-weight:700;border-bottom:3px solid var(--y)">로그인</a></p>
+      <p class="note">데모 버전: 계정 정보는 이 브라우저(localStorage)에만 저장되며 비밀번호는 해시되어 저장됩니다. 실제 운영 시 서버 인증으로 교체하세요.</p>
+    </div>
+  </main>
+</div>
+<script src="js/auth.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>
